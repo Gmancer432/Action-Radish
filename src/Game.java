@@ -1,20 +1,21 @@
 import javax.swing.*;
 
-public class Game {
+public class Game extends JFrame{
 
-    private JFrame win = new JFrame("Action Radish!");
     private Menu menu;
 
     public Game()
     {
-        win.setSize(1000, 750);
-        win.setLocationRelativeTo(null);
-        win.setLayout(null);
-        win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        win.setResizable(false);
+        super("Action Radish!");
+        setSize(1000, 750);
+        setLocationRelativeTo(null);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
 
         menu = new Menu(this);
+        add(menu);
 
-        win.setVisible(true);
+        setVisible(true);
     }
 }
